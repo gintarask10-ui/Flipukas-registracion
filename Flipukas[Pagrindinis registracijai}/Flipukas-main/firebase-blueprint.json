@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profile document",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "wishlist": {
+      "title": "WishlistItem",
+      "description": "User saved 3D garment configuration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "productId": { "type": "string" },
+        "customization": { "type": "object" },
+        "fabricId": { "type": "string" },
+        "price": { "type": "number" },
+        "snapshotUrl": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "userId", "productId", "price"]
+    },
+    "trending": {
+      "title": "TrendingStyle",
+      "description": "Community trending garment customization",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "authorName": { "type": "string" },
+        "productId": { "type": "string" },
+        "customization": { "type": "object" },
+        "fabricId": { "type": "string" },
+        "price": { "type": "number" },
+        "popularityScore": { "type": "number" },
+        "saveCount": { "type": "number" },
+        "trendingTag": { "type": "string" }
+      },
+      "required": ["id", "title", "popularityScore"]
+    },
+    "wishlistComment": {
+      "title": "WishlistComment",
+      "description": "User notes and comments on saved 3D designs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "wishlistId": { "type": "string" },
+        "userId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "tag": { "type": "string" }
+      },
+      "required": ["id", "wishlistId", "userId", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profile data"
+    },
+    "/users/{userId}/wishlist/{wishlistId}": {
+      "schema": "wishlist",
+      "description": "User personal wishlist configurations"
+    },
+    "/users/{userId}/wishlist/{wishlistId}/comments/{commentId}": {
+      "schema": "wishlistComment",
+      "description": "User notes and comments on saved 3D designs"
+    },
+    "/trending_styles/{styleId}": {
+      "schema": "trending",
+      "description": "Real-time community trending styles"
+    }
+  }
+}

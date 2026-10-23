@@ -1,0 +1,6 @@
+{
+  "name": "Flipukas – 3D Drabužių ir Stiliaus Platforma",
+  "description": "Novatoriška, interaktyvi 3D el. parduotuvė ir stiliaus laboratorija su realaus laiko drabužių apžiūra bei gyvu personalizavimu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
