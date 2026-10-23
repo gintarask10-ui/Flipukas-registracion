@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Box, RotateCw, Sparkles } from 'lucide-react';
+import { ArrowDown, Box, RotateCw } from 'lucide-react';
 import { HERO_IMAGE } from '../data/products';
 
 interface HeroProps {
@@ -33,6 +33,22 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLab }) => {
             <p className="text-base sm:text-lg text-stone-300 leading-relaxed mb-8 max-w-2xl font-light">
               Ar kada nors svajojai drabužius rinktis ne iš plokščių nuotraukų, o pamatyti juos realiu laiku – iš visų pusių, su natūraliu audinių švytėjimu, mikroskopiniu pynimu ir asmenine monograma? <strong className="text-white font-medium">„Flipukas Atelier“</strong> keičia požiūrį į internetinę madą.
             </p>
+
+            {/* Brevo Registracijos Forma / VIP Waitlist */}
+            <div className="mb-8 p-3 rounded-2xl bg-stone-900/90 border border-[#d4af37]/30 shadow-2xl max-w-xl">
+              <p className="text-xs text-[#d4af37] font-mono mb-2 uppercase tracking-wider font-semibold text-center">
+                Gaukite VIP pakvietimą ir 15% nuolaidą launch metu:
+              </p>
+              <iframe 
+                width="100%" 
+                height="300" 
+                src="https://ad66b8b5.sibforms.com/v2/serve/MUIFACOfRTPc6oarHdw5LXNpxHsXIv-mm9Ryc3HElYsUUbgkTHCuyboSnZ-tPzBTmP8dee_Hbgx-zo8eQPyRzHvlDx0x9gTdNxTiGnTbRTKeOfGjzufB2_1tlpBV0XSuOQrtsn8yG3hXqnDS_jjqgMONEsMKI-Gnrp7QLqDnxx7Kz-ICfbKYTgCRuJHRHN4DKHlctKvX5GEdp9dKJg==" 
+                frameBorder="0" 
+                scrolling="no" 
+                allowFullScreen 
+                style={{ display: 'block', margin: '0 auto', background: 'transparent' }}
+              />
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
