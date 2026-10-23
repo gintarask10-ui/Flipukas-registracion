@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Box, RotateCw, Sparkles } from 'lucide-react';
+import { ArrowDown, Box, RotateCw } from 'lucide-react';
 import { HERO_IMAGE } from '../data/products';
 
 interface HeroProps {
