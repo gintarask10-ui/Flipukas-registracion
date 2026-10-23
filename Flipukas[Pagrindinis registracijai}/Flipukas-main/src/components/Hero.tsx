@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Box, RotateCw } from 'lucide-react';
+import { ArrowDown, Box, RotateCw, Sparkles } from 'lucide-react';
 import { HERO_IMAGE } from '../data/products';
 
 interface HeroProps {
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLab }) => {
             {/* Brevo Registracijos Forma / VIP Waitlist */}
             <div className="mb-8 p-3 rounded-2xl bg-stone-900/90 border border-[#d4af37]/30 shadow-2xl max-w-xl">
               <p className="text-xs text-[#d4af37] font-mono mb-2 uppercase tracking-wider font-semibold text-center">
-                Gaukite VIP pakvietimą ir 15% nuolaidą launch metu:
+                Registruokitės VIP waitlist ir gaukite 15% nuolaidą:
               </p>
               <iframe 
                 width="100%" 
